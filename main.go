@@ -229,7 +229,18 @@ var memprofile bool
 
 func initFlags() {
 	flags := rootCmd.Flags()
+
 	flags.StringVarP(&config.Model, "model", "m", config.Model, stdoutStyles().FlagDesc.Render(help["model"]))
+	rootCmd.RegisterFlagCompletionFunc("model",
+		func(cmd *cobra.Command, args []string, toComplete string) ([]string, cobra.ShellCompDirective) {
+			names := []string{}
+			for _, m := range config.Models {
+				names = append(names, m.Aliases...)
+			}
+			return names, cobra.ShellCompDirectiveDefault
+		},
+	)
+
 	flags.BoolVarP(&config.AskModel, "ask-model", "M", config.AskModel, stdoutStyles().FlagDesc.Render(help["ask-model"]))
 	flags.StringVarP(&config.API, "api", "a", config.API, stdoutStyles().FlagDesc.Render(help["api"]))
 	flags.StringVarP(&config.HTTPProxy, "http-proxy", "x", config.HTTPProxy, stdoutStyles().FlagDesc.Render(help["http-proxy"]))
