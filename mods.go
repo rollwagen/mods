@@ -402,14 +402,20 @@ func (m *Mods) startCompletionCmd(content string) tea.Cmd {
 		stream, err := client.CreateChatCompletionStream(
 			ctx,
 			openai.ChatCompletionRequest{
-				Model:          mod.Name,
-				Temperature:    noOmitFloat(cfg.Temperature),
-				TopP:           noOmitFloat(cfg.TopP),
-				Stop:           cfg.Stop,
-				MaxTokens:      cfg.MaxTokens,
-				Messages:       m.messages,
-				Stream:         true,
-				ResponseFormat: responseFormat(cfg),
+				Model:       mod.Name,
+				Temperature: noOmitFloat(cfg.Temperature),
+				TopP:        noOmitFloat(cfg.TopP),
+				MaxTokens:   cfg.MaxTokens,
+				Messages:    m.messages,
+				Stream:      true,
+				// ignore for the time being as firewords.ai OpenAI compatible API
+				// throws an error / can't handle this param:
+				//
+				// ResponseFormat: responseFormat(cfg),
+				//
+				// OLD ResponseFormat: &openai.ChatCompletionResponseFormat{
+				// OLD	Type: responseType(cfg),
+				// OLD },
 			},
 		)
 		ae := &openai.APIError{}
