@@ -14,19 +14,20 @@ require (
 	github.com/charmbracelet/glamour v0.6.0
 	github.com/charmbracelet/huh v0.3.0
 	github.com/charmbracelet/lipgloss v0.10.0
-	github.com/charmbracelet/x/editor v0.0.0-20240307183742-ad8dadc14f31
-	github.com/charmbracelet/x/exp/ordered v0.0.0-20240307183742-ad8dadc14f31
-	github.com/charmbracelet/x/exp/strings v0.0.0-20240307183742-ad8dadc14f31
+	github.com/charmbracelet/x/editor v0.0.0-20240322170634-ebda89b611f2
+	github.com/charmbracelet/x/exp/ordered v0.0.0-20240322170634-ebda89b611f2
+	github.com/charmbracelet/x/exp/strings v0.0.0-20240322170634-ebda89b611f2
 	github.com/jmoiron/sqlx v1.3.5
 	github.com/lucasb-eyer/go-colorful v1.2.0
 	github.com/mattn/go-isatty v0.0.20
 	github.com/muesli/termenv v0.15.2
-	github.com/sashabaranov/go-openai v1.20.2
+	github.com/sashabaranov/go-openai v1.20.4
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/pflag v1.0.5
+	github.com/stretchr/testify v1.7.0
 	golang.org/x/term v0.18.0
 	gopkg.in/yaml.v3 v3.0.1
-	modernc.org/sqlite v1.29.3
+	modernc.org/sqlite v1.29.5
 )
 
 require (
@@ -43,7 +44,6 @@ require (
 	github.com/gorilla/css v1.0.1 // indirect
 	github.com/hashicorp/golang-lru/v2 v2.0.7 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
-	github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51 // indirect
 	github.com/kr/pretty v0.3.0 // indirect
 	github.com/mattn/go-localereader v0.0.1 // indirect
 	github.com/mattn/go-runewidth v0.0.15 // indirect
@@ -62,8 +62,9 @@ require (
 	golang.org/x/sync v0.6.0 // indirect
 	golang.org/x/sys v0.18.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
+	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 	modernc.org/gc/v3 v3.0.0-20240304020402-f0dba7c97c2b // indirect
-	modernc.org/libc v1.43.1 // indirect
+	modernc.org/libc v1.47.0 // indirect
 	modernc.org/mathutil v1.6.0 // indirect
 	modernc.org/memory v1.7.2 // indirect
 	modernc.org/strutil v1.2.0 // indirect
